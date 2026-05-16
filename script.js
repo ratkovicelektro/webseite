@@ -66,4 +66,51 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Web3Forms AJAX Submit
+    const form = document.getElementById('contactForm');
+    const result = document.getElementById('form-result');
+
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(form);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+            
+            result.innerHTML = "Sende Nachricht...";
+            result.style.color = "#333";
+
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+            .then(async (response) => {
+                let json = await response.json();
+                if (response.status == 200) {
+                    result.innerHTML = "Vielen Dank für Ihre Nachricht! Wir melden uns in Kürze.";
+                    result.style.color = "green";
+                } else {
+                    console.log(response);
+                    result.innerHTML = json.message || "Es ist ein Fehler aufgetreten.";
+                    result.style.color = "red";
+                }
+            })
+            .catch(error => {
+                console.log(error);
+                result.innerHTML = "Etwas ist schiefgelaufen!";
+                result.style.color = "red";
+            })
+            .then(function() {
+                form.reset();
+                setTimeout(() => {
+                    result.innerHTML = "";
+                }, 8000);
+            });
+        });
+    }
 });
