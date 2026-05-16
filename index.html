@@ -125,25 +125,27 @@
             </div>
 
             <div class="contact-form-wrapper">
-                <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST" onsubmit="event.preventDefault(); alert('Vielen Dank für Ihre Nachricht.');">
+                <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
                    <input type="hidden" name="access_key" value="741a61e4-0ac5-4b56-ba2d-badff3c18d79">
+                    
                     <div class="form-group">
                         <label for="name">Ihr Name</label>
-                        <input type="text" id="name" required>
+                        <input type="text" id="name" name="name" required>
                     </div>
                     <div class="form-group">
                         <label for="email">E-Mail Adresse</label>
-                        <input type="email" id="email" required>
+                        <input type="email" id="email" name="email" required>
                     </div>
                     <div class="form-group">
                         <label for="phone">Telefonnummer (optional)</label>
-                        <input type="tel" id="phone">
+                        <input type="tel" id="phone" name="phone">
                     </div>
                     <div class="form-group">
                         <label for="message">Ihre Nachricht</label>
-                        <textarea id="message" required></textarea>
+                        <textarea id="message" name="message" required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Nachricht senden</button>
+                    <p id="form-result" style="margin-top: 1rem; font-weight: bold;"></p>
                 </form>
             </div>
         </div>
