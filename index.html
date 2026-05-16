@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ratkovic Elektrotechnik | Ihr vertrauensvoller Partner für Elektrik</title>
+    <meta name="description" content="Professionelle Dienstleistungen für Schwachstrom, Innenhausverkabelung, Kabelverlegung und Haustechnik von Ratkovic Elektrotechnik.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="logo">
+                <i class="fa-solid fa-bolt"></i> Ratkovic Elektrotechnik
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#leistungen">Dienstleistungen</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+            <button class="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Zuverlässige Elektrotechnik für Ihr Zuhause.</h1>
+                <p>Ratkovic Elektrotechnik ist Ihr zuverlässiger Partner für Schwachstrom, Innenhausverkabelung, Kabelverlegung und innovative Haustechnik.</p>
+                <a href="#leistungen" class="btn btn-primary">Unsere Leistungen entdecken</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Über uns Section -->
+    <section id="ueber-uns">
+        <div class="container content-split">
+            <div class="text-content">
+                <h2>Qualität aus <span>Handmeister-Hand</span></h2>
+                <p>Wir sind Ihr Fachbetrieb für alle Arten von Elektroinstallationen in Bietigheim-Bissingen und Umgebung. Von der klassischen Kabelverlegung im Rohbau bis hin zum modernen Smart-Home-System – wir verbinden traditionelles Handwerk mit modernster Technik.</p>
+                <img src="assets/cables.png" alt="Kabelverlegung" class="inline-image" style="margin-top: 2rem;">
+            </div>
+            <div class="image-content">
+                <img src="assets/electrician.png" alt="Elektriker bei der Arbeit" class="featured-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="leistungen">
+        <div class="container">
+            <h2>Unsere <span>Dienstleistungen</span></h2>
+            <div class="services-grid">
+                
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-network-wired"></i>
+                    </div>
+                    <h3>Schwachstrom</h3>
+                    <p>Sichere und effiziente Schwachstrominstallationen für Kommunikation, Datennetzwerke und Sicherheitstechnik. Perfekt auf Ihre Bedürfnisse abgestimmt.</p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-house-chimney-crack"></i>
+                    </div>
+                    <h3>Innenhausverkabelung</h3>
+                    <p>Fachgerechte Neu- und Umverkabelung im Innenbereich. Wir sorgen für eine saubere, unsichtbare und normgerechte Elektroinfrastruktur.</p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-plug"></i>
+                    </div>
+                    <h3>Kabelverlegung</h3>
+                    <p>Präzise Kabeltrassen und Verlegung für Industrie und Privat. Robust, strukturiert und bereit für zukünftige technologische Anforderungen.</p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+                    <h3>Haustechnik</h3>
+                    <p>Intelligente Gebäudeautomation und Smart-Home-Lösungen. Steuern Sie Licht, Klima und Sicherheit komfortabel und energieeffizient.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="kontakt" class="contact">
+        <div class="container contact-container">
+            <div class="contact-info">
+                <h2>Kontaktieren Sie uns <span></h2>
+                <p>Haben Sie ein Projekt im Kopf oder benötigen Sie eine fachkundige Beratung? Kontaktieren Sie uns unverbindlich. Wir freuen uns darauf, von Ihnen zu hören.</p>
+                
+                <ul class="contact-details">
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>info@ratkovic-elektro.de</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+49 (0) 177 794 7411</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Flößerstr. 120<br>74321 Bietigheim-Bissingen<span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="contact-form-wrapper">
+                <form class="contact-form" id="contactForm" onsubmit="event.preventDefault(); alert('Vielen Dank für Ihre Nachricht. Dies ist eine Demo.');">
+                    <div class="form-group">
+                        <label for="name">Ihr Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-Mail Adresse</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Telefonnummer (optional)</label>
+                        <input type="tel" id="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Ihre Nachricht</label>
+                        <textarea id="message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Nachricht senden</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="logo">
+                <i class="fa-solid fa-bolt"></i> Ratkovic Elektrotechnik
+            </div>
+            <div class="footer-links">
+                <a href="impressum.html">Impressum</a>
+                <a href="#">Datenschutz</a>
+            </div>
+            <div class="copyright">
+                &copy; <span id="year"></span> Ratkovic Elektrotechnik. Alle Rechte vorbehalten.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
